@@ -1,40 +1,67 @@
-/* Genel stiller */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
+    background-color: #000; /* Siyah arka plan */
+    color: #fff; /* Beyaz metin */
+}
+
+/* Header ve logo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #ff6600; /* Turuncu renk */
     color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .header-title h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header .header-right {
+    font-size: 16px;
+}
+
+header .header-right a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff6600; /* Turuncu renk */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header .header-right a:hover {
+    background-color: #cc5200; /* Daha koyu turuncu */
 }
 
 /* Sticky navbar */
 .navbar {
     position: sticky;
     top: 0;
-    background-color: #4d685e;
-    z-index: 1000; /* Navbar'ı diğer içeriklerin üstünde tutmak için */
+    background-color: #000; /* Siyah renk */
+    z-index: 1000;
     width: 100%;
-    padding: 10px 0; /* Yüksekliği ayarlayın */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Görsel ayrım için gölge */
+    padding: 10px 0;
 }
 
-/* Ensure that navbar content is not cut off on scroll */
-body {
-    margin: 0; /* Varsayılan margin'i kaldır */
-    padding-top: 60px; /* Navbar yüksekliği için padding ayarlayın */
-}
-
-/* Navbar slider */
 .navbar-slider {
     display: flex;
     overflow-x: auto;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-    padding: 0 10px; /* İçerikte biraz boşluk bırakın */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .navbar-slider::-webkit-scrollbar {
-    display: none;  /* Safari ve Chrome */
+    display: none;
 }
 
 .navbar-slider ul {
@@ -42,7 +69,6 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%; /* Genişliği ayarlayın */
 }
 
 .navbar-slider ul li {
@@ -52,45 +78,15 @@ body {
 .navbar-slider ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: block;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar-slider ul li a:hover,
 .navbar-slider ul li a.active {
-    background-color: #3a5249;
-}
-
-/* Header stilleri */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #4d685e;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.header-title h1 {
-    margin: 0;
-}
-
-.header-right .logout-button {
+    background-color: #ff6600; /* Turuncu renk */
     color: #fff;
-    text-decoration: none;
-    background-color: #4d685e;
-    padding: 10px 20px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.header-right .logout-button:hover {
-    background-color: #3a5249;
 }
 
 /* Ana içerik stilleri */
@@ -99,58 +95,81 @@ main {
 }
 
 .category-section {
-    margin-top: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    background: #333; /* Koyu gri arka plan */
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .category-section h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    font-size: 22px;
+    color: #fff; /* Beyaz metin */
 }
 
 .category-image {
     display: block;
     margin: 0 auto;
-    width: 90%;
-    max-height: 150px;
+    width: 100%;
+    max-height: 200px;
     object-fit: cover;
+    border-bottom: 2px solid #f4f4f4;
 }
 
 .menu-category {
-    margin-top: 20px;
+    padding: 15px;
 }
 
-/* Menü öğeleri */
 .accordion {
-    background-color: #4d685e;
+    background-color: #ff6600; /* Turuncu renk */
     color: #fff;
     cursor: pointer;
-    padding: 18px;
+    padding: 15px;
     width: 100%;
     text-align: left;
     border: none;
     outline: none;
-    transition: background-color 0.4s;
     font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .accordion:hover {
-    background-color: #3a5249;
+    background-color: #cc5200; /* Daha koyu turuncu */
 }
 
 .panel {
-    padding: 0 18px;
-    background-color: #121212;
+    padding: 10px 15px;
+    background-color: #444; /* Koyu gri arka plan */
     display: none;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
 }
 
 .item {
-    display: flex;
-    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
     padding: 10px 0;
 }
 
 .item p {
     margin: 0;
+}
+
+/* Footer stilleri */
+footer {
+    background-color: #000; /* Siyah renk */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Absolute yerine relative */
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px; /* Font boyutunu ayarlayabilirsiniz */
 }
