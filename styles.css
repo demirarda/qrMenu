@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: #ff6600; /* Turuncu renk */
+    background: black; /* Turuncu renk */
     color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

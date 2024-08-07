@@ -3,71 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dubhlinn Çevre</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Hops</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
         }
 
         .container {
             width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-
-        header {
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
+            background-color: black;
             padding: 20px;
-            background: #4a90e2;
+            box-sizing: border-box;
+        }
+
+        header {
+            padding: 20px 0;
             color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
 
         .login {
             align-self: flex-end;
             margin-bottom: 10px;
-            font-size: 16px;
+            margin-right: 10px;
         }
 
         .login a {
             color: #fff;
             text-decoration: none;
-            background-color: #0056b3;
-            padding: 10px 15px;
+            background-color: #FF5722;
+            padding: 8px 12px;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
 
         .login a:hover {
-            background-color: #003d7a;
+            background-color: #E64A19;
         }
 
         .logo {
             height: 80px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         h1 {
             margin: 0;
             font-size: 24px;
-            text-align: center;
         }
 
         .menu-button {
-            margin-top: 20px;
-            padding: 10px 20px;
+            margin: 20px 0;
+            padding: 12px 25px;
             font-size: 18px;
             color: #fff;
-            background-color: #007bff;
+            background-color: #FF5722;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -75,22 +83,50 @@
         }
 
         .menu-button:hover {
-            background-color: #0056b3;
+            background-color: #E64A19;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px 0;
+            width: 100%;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #FF5722;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: calc(100% - 40px);
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        .footer-links a:hover {
+            background-color: #E64A19;
         }
 
         @media (min-width: 600px) {
-            header {
-                flex-direction: row;
-                justify-content: space-between;
+            .container {
+                padding: 40px;
             }
 
             h1 {
-                font-size: 32px;
+                font-size: 28px;
             }
 
             .menu-button {
-                align-self: flex-end;
-                margin-top: 0;
+                padding: 15px 30px;
+                font-size: 20px;
+            }
+
+            .footer-links a {
+                padding: 12px;
             }
         }
     </style>
@@ -99,10 +135,13 @@
     <div class="container">
         <header>
             <div class="login"><a href="#">Giriş yap</a></div>
-            <img src="images/logo.png" alt="Dubh Linn Logo" class="logo">
-            <h1>Dubhlinn Çevre</h1>
-            <a href="menu.html"><button class="menu-button" onclick="openMenu()">Menüyü Gör</button></a>
+            <img src="images/hops.jpg" alt="Dubh Linn Logo" class="logo">
+            
+            <a href="menu.html"><button class="menu-button">Menüyü Gör</button></a>
         </header>
+        <div class="footer-links">
+            <a href="#">Bilgi</a>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
